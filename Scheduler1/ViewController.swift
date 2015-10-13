@@ -121,7 +121,8 @@ class ViewController: UIViewController,TodoSavedDelegate, EventSavedDelegate, UI
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "eventCell")
             let todoCell = allEvents[indexPath.row]
-            if let todo = todoCell as? Todo{
+            if let todo = todoCell as
+        ? Todo{
                 cell.textLabel!.text = todo.title + "     " + String(todo.duration) + " min"
                 cell.backgroundColor = UIColor(red: 236.0/255.0, green: 236.0/255.0, blue: 236.0/255.0, alpha: 1.0);
                 return cell
